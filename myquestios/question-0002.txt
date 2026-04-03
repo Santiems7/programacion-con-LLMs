@@ -1,0 +1,11 @@
+En un laboratorio de biología molecular se están analizando muestras celulares para entrenar un modelo que prediga si una célula presenta una mutación de interés.
+Cada fila del DataFrame representa una muestra celular. El problema es que el DataFrame puede contener: columnas numéricas con mediciones científicas, columnas no numéricas con información descriptiva, valores faltantes (NaN) en algunas mediciones. 
+Además, las variables numéricas están en escalas muy diferentes, por lo que deben normalizarse antes de usarlas en un algoritmo de machine learning sensible a la escala.
+Escribe una función llamada preprocesar_muestras_celulares(df, target_col) que realice lo siguiente:
+1.	Separe la variable objetivo y, indicada por target_col. 
+2.	Construya X usando solo las columnas numéricas, excluyendo la columna objetivo. 
+3.	Impute los valores faltantes de X usando el promedio de cada columna, utilizando SimpleImputer de sklearn. 
+4.	Escale las características imputadas para que tengan media 0 y desviación estándar 1, utilizando StandardScaler de sklearn. 
+5.	Devuelva dos arrays de numpy: 
+    o la matriz X procesada, 
+    o el vector y. 

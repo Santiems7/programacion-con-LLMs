@@ -1,0 +1,11 @@
+En un laboratorio de química analítica se están estudiando muestras para predecir si una sustancia pertenece a una categoría de riesgo químico alto o bajo.
+Cada fila del DataFrame representa una muestra, y cada columna numérica representa una medición obtenida en laboratorio, como, por ejemplo: acidez, concentración de sales, conductividad, densidad, absorbancia. 
+Sin embargo, algunas mediciones tienen valores faltantes (NaN) por fallos instrumentales. Además, algunas columnas pueden tener el mismo valor en todas las filas, por lo que no aportan información útil al modelo. Finalmente, las características útiles deben escalarse antes de usarlas en un algoritmo de machine learning sensible a la escala.
+Escribe una función llamada preparar_muestras_quimicas(df, target_col) que realice lo siguiente:
+1.	Separe las características X de la variable objetivo y, indicada por target_col. 
+2.	Impute los valores faltantes en X usando el promedio de cada columna, utilizando SimpleImputer de sklearn. 
+3.	Elimine de X las columnas cuya varianza sea igual a 0, es decir, columnas constantes. 
+4.	Escale las características restantes para que tengan media 0 y desviación estándar 1, utilizando StandardScaler de sklearn. 
+5.	Devuelva dos arrays de numpy: 
+    o la matriz X procesada, 
+    o el vector y.

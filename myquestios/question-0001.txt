@@ -1,0 +1,10 @@
+En un laboratorio de astronomía se están analizando observaciones de estrellas para entrenar un modelo que permita clasificar si una estrella es candidata a ser variable o no.
+Cada fila del DataFrame representa una estrella observada, y las columnas numéricas contienen mediciones físicas obtenidas por sensores, como por ejemplo: brillo medio, temperatura superficial, distancia estimada, metalicidad, radio estelar.
+Sin embargo, los instrumentos no siempre registran todas las mediciones, por lo que hay valores faltantes (NaN). Además, las variables están en escalas muy diferentes, lo que puede perjudicar algoritmos de machine learning sensibles a la escala.
+Escribe una función llamada procesar_observaciones_estelares(df, columna_objetivo) que realice lo siguiente:
+1.	Separe las características X de la variable objetivo y, indicada por columna_objetivo. 
+2.	Impute los valores faltantes en X usando el promedio de cada columna, utilizando SimpleImputer de sklearn. 
+3.	Escale las características imputadas para que tengan media 0 y desviación estándar 1, utilizando StandardScaler de sklearn. 
+4.	Devuelva dos arrays de numpy: 
+    o la matriz X procesada, 
+    o el vector y
